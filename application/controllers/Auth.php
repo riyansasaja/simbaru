@@ -6,6 +6,6 @@ class Auth extends CI_Controller
 
     public function index()
     {
-        echo "ini auth index";
+        $this->load->view('auth/v_login');
     }
 }
