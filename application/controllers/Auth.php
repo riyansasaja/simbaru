@@ -11,6 +11,10 @@ class Auth extends CI_Controller
 
     public function index()
     {
+        // cek session
+        if ($this->session->userdata('email')) {
+            redirect('home');
+        }
         // form validation rule
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -43,6 +47,8 @@ class Auth extends CI_Controller
                         'email' => $user['email'],
                         'role_id' => $user['role_id']
                     ];
+                    // bekeng depe session
+                    $this->session->set_userdata($data);
                     // kirim ka home kalo sudah dapa
                     redirect('home');
                     // else kalo password salah
@@ -71,6 +77,11 @@ class Auth extends CI_Controller
     // method untuk register
     public function register()
     {
+        // cek session
+        if ($this->session->userdata('email')) {
+            redirect('home');
+        }
+
         // form validation rules
         $this->form_validation->set_rules('fullname', 'Full Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[login.email]', [
@@ -98,5 +109,13 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please activate your account</div>');
             redirect('auth');
         }
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('role_id');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Yeaayy Kamu berhasil Keluar!</div>');
+        redirect('auth');
     }
 }
