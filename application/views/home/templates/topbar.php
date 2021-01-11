@@ -161,7 +161,7 @@
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">UserName</span>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name']; ?></span>
                         <div>
                             <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1ygjvqkr.json" background="transparent" speed="1" style="width: 30px; height: 30px;" autoplay></lottie-player>
                         </div>

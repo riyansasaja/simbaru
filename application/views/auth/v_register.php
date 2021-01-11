@@ -42,7 +42,7 @@
                             <form action="<?= base_url('auth/register') ?>" class="user" method="POST">
                                 <div class="form-group row">
                                     <div class="col">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName" name="fullname" placeholder="Full Name" value="<?= set_value('fullname'); ?>">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName" name="name" placeholder="Full Name" value="<?= set_value('fullname'); ?>">
                                         <?= form_error('fullname', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                 </div>

@@ -83,7 +83,7 @@ class Auth extends CI_Controller
         }
 
         // form validation rules
-        $this->form_validation->set_rules('fullname', 'Full Name', 'required|trim');
+        $this->form_validation->set_rules('name', 'Full Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[login.email]', [
             'is_unique' => 'This email has already registered!'
         ]);
