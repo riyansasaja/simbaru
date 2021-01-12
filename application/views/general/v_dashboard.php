@@ -24,7 +24,7 @@
                             <div class="text-muted text-xs">Wanita 200 orang</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                             <div class="text-muted text-xs">Wanita 200 orang</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fab fa-fw fa-envira fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                             <div class="text-muted text-xs">Wanita 200 orang</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-dove fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                                 KLIK untuk Mengecek PNS yang Berulang Tahun Hari ini</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fab fa-earlybirds fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>

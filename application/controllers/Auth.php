@@ -13,7 +13,7 @@ class Auth extends CI_Controller
     {
         // cek session
         if ($this->session->userdata('email')) {
-            redirect('home');
+            redirect('general');
         }
         // form validation rule
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
@@ -49,8 +49,12 @@ class Auth extends CI_Controller
                     ];
                     // bekeng depe session
                     $this->session->set_userdata($data);
-                    // kirim ka home kalo sudah dapa
-                    redirect('home');
+                    // kirim ka tampilan kalo sudah dapa
+                    if ($user['role_id'] == 1) {
+                        redirect('general');
+                    } else {
+                        redirect('admin');
+                    }
                     // else kalo password salah
                 } else {
                     // bekeng flash data message mo tampilkan di login view
@@ -79,7 +83,7 @@ class Auth extends CI_Controller
     {
         // cek session
         if ($this->session->userdata('email')) {
-            redirect('home');
+            redirect('general');
         }
 
         // form validation rules
@@ -106,7 +110,7 @@ class Auth extends CI_Controller
                 'is_active' => 0
             ];
             $this->db->insert('login', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please activate your account</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat Akun so klar bekeng, silahkan hubungi admin for mo kase aktif!</div>');
             redirect('auth');
         }
     }
@@ -115,7 +119,7 @@ class Auth extends CI_Controller
     {
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Yeaayy Kamu berhasil Keluar!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Yeaayy selamat neh so berhasil kaluar!</div>');
         redirect('auth');
     }
 }

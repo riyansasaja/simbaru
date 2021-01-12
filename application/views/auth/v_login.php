@@ -58,7 +58,7 @@
                                     <hr>
 
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('auth/register') ?>">Create an Account!</a>
+                                        <a class="small" href="<?= base_url('auth/register') ?>">Nyanda da Akun, REGISTER di sini!</a>
                                     </div>
                                 </div>
                             </div>
