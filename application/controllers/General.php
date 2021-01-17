@@ -13,6 +13,7 @@ class General extends CI_Controller
         // cek session lewat helper
         is_logged_in();
         $this->load->model('modeldata');
+        $this->load->library('hitung');
     }
 
     public function index()
@@ -74,10 +75,11 @@ class General extends CI_Controller
         $data['title'] = 'Data Pegawai';
         $data['user'] =  $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
         $data['detail'] = $this->modeldata->showdetail($nip);
+
         $data['pendidikan'] = $this->modeldata->showpendidikan($nip);
         $data['pangkat'] = $this->modeldata->showpangkat($nip);
         $data['jabatan'] = $this->modeldata->showjabatan($nip);
-        $data['pendakhir'] = $this->modeldata->showpendakhir($nip);
+        // $data['pendakhir'] = $this->modeldata->showpendakhir($nip);
 
         $this->load->view('templates/headbar');
         $this->load->view('templates/sidebar', $data);

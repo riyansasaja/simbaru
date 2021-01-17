@@ -7,6 +7,9 @@
                     <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_LOw4AL.json" background="transparent" speed="1" loop autoplay></lottie-player>
                 </div>
                 <!-- <div class="card-body"> -->
+                <?php //var_dump($detail);
+                //die;
+                ?>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-uppercase font-weight-bold bg-danger text-light"><?= $detail[0]['gelar_depan'] . " " . $detail[0]['nama'] . " " . $detail[0]['gelar_blk'] ?></li>
                     <li class="list-group-item font-weight-bold bg-info text-light">NIP. <?= $detail[0]['nip']; ?></li>
@@ -55,8 +58,6 @@
                                                         <td class="text-primary">Eselon</td>
                                                         <td><?= $d['id_eselon'] ?></td>
                                                     </tr>
-                                                <?php endforeach; ?>
-
                                             </tbody>
                                         </table>
                                     </div>
@@ -69,25 +70,25 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="text-primary">Pangkat/Golongan</td>
-                                                    <td><?= $d['golongan'] . ", " . $d['pangkat'] ?></td>
+                                                    <td><?= $d['pangkat'] ?> , <?= $d['golongan'] ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-primary">Masa Kerja</td>
-                                                    <td><?= $d['mkg_tahun'] . " Tahun " . $d['mkg_bulan'] . " Bulan";  ?></td>
+                                                    <td><?= $d['mkg_tahun'] ?> Tahun, <?= $d['mkg_bulan'] ?> Bulan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-primary">Status</td>
                                                     <td><?= $d['kedudukan_hukum_nama'] . " | " . $d['status_cpns_pns'] ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">Email</td>
-                                                    <td><?= $d['email'] ?></td>
+                                                    <td class="text-primary">TTL</td>
+                                                    <td><?= $d['tempat_lahir_nama'] ?>, <?= $d['tgl_lahir'] ?> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-primary">Alamat</td>
-                                                    <td><?= $d['alamat'] ?></td>
+                                                    <td class="text-primary">npwp</td>
+                                                    <td><?= $d['npwp_nomor'] ?></td>
                                                 </tr>
-
+                                            <?php endforeach; ?>
                                             </tbody>
                                         </table>
                                     </div>
