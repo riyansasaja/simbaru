@@ -21,14 +21,6 @@ class General extends CI_Controller
         // ambe tu user da login pe data, ambe dari email
         $data['user'] =  $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Dashboard';
-        $data['totalpegawai'] =  $this->modeldata->totalpegawai();
-        $data['totalpria'] =  $this->modeldata->totalpria();
-        $data['totalwanita'] =  $this->modeldata->totalwanita();
-        $data['totaljft'] =  $this->modeldata->totaljft();
-        $data['totaljfu'] =  $this->modeldata->totaljfu();
-        $data['totalstruktural'] =  $this->modeldata->totalstruktural();
-        $data['totalagama'] =  $this->modeldata->totalagama();
-
 
         $this->load->view('templates/headbar', $data);
         $this->load->view('templates/sidebar', $data);

@@ -15,12 +15,12 @@ class Admin extends CI_Controller
 
         // ambe tu user da login pe data, ambe dari email
         $data['user'] =  $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
-        $data['title'] = 'Dashboard';
+        $data['title'] = 'Upload Data';
 
         $this->load->view('templates/headbar', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('general/v_dashboard', $data);
+        $this->load->view('admin/v_scanData', $data);
         $this->load->view('templates/footbar');
     }
 

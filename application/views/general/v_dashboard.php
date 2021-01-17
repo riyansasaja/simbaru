@@ -18,9 +18,9 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah Pegawai Aktif</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $totalpegawai; ?> Orang</div>
-                            <div class="text-muted text-xs"> Pria <?= $totalpria; ?> Orang</div>
-                            <div class="text-muted text-xs"> Wanita <?= $totalwanita; ?> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
+                            <div class="text-muted text-xs"> Pria Orang</div>
+                            <div class="text-muted text-xs"> Wanita Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>
@@ -39,7 +39,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS JFT</div>
 
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totaljft; ?> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fab fa-fw fa-envira fa-2x text-gray-300"></i>
@@ -58,7 +58,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS JFU</div>
 
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totaljfu; ?> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-dove fa-2x text-gray-300"></i>
@@ -76,7 +76,7 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS Pejabat Struktural</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalstruktural; ?> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fab fa-earlybirds fa-2x text-gray-300"></i>
@@ -222,28 +222,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($totalagama as $agama) : ?>
-                                <tr>
-                                    <td class="text-primary">Islam</td>
-                                    <td><?= $agama['islam'] ?></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-primary">Kristen</td>
-                                    <td><?= $agama['kristen'] ?></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-primary">Katholik</td>
-                                    <td><?= $agama['katholik'] ?></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-primary">Hindu</td>
-                                    <td><?= $agama['hindu'] ?></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-primary">Budha</td>
-                                    <td><?= $agama['budha'] ?></td>
-                                </tr>
-                            <?php endforeach; ?>
+
+                            <tr>
+                                <td class="text-primary">Islam</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Kristen</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Katholik</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Hindu</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Budha</td>
+                                <td></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

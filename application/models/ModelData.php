@@ -37,40 +37,4 @@ class ModelData extends CI_Model
     {
         return $this->db->get_where('v_pendakhir', ['nip' => $nip])->result_array();
     }
-
-    public function totalPegawai()
-    {
-
-        return $this->db->get('tb_data_inti')->num_rows();
-    }
-    public function totalPria()
-    {
-
-        return $this->db->get_where('tb_data_inti', ['jenis_kelamin' => 'M'])->num_rows();
-    }
-    public function totalWanita()
-    {
-
-        return $this->db->get_where('tb_data_inti', ['jenis_kelamin' => 'F'])->num_rows();
-    }
-    public function totalJft()
-    {
-
-        return $this->db->get_where('v_jabakhir', ['id_jenis_jab' => '2'])->num_rows();
-    }
-    public function totalJfu()
-    {
-
-        return $this->db->get_where('v_jabakhir', ['id_jenis_jab' => '4'])->num_rows();
-    }
-    public function totalStruktural()
-    {
-
-        return $this->db->get_where('v_jabakhir', ['id_jenis_jab' => '1'])->num_rows();
-    }
-    public function totalAgama()
-    {
-
-        return $this->db->get('v_hitung_agama')->result_array();
-    }
 }
