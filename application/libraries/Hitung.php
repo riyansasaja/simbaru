@@ -12,6 +12,6 @@ class Hitung
     public function countItem()
     {
         $this->ci->load->model('modeldata');
-        return $this->ci->modeldata->countdashboard()->result_array();
+        return $this->ci->modeldata->count1()->result_array();
     }
 }

@@ -42,8 +42,9 @@ class ModelData extends CI_Model
     //     return $this->db->get_where('v_pendakhir', ['nip' => $nip])->result_array();
     // }
 
-    public function countdashboard()
+    public function count1()
     {
-        return $this->db->get('v_dashboard');
+        $sql = "SELECT COUNT(nip) AS total, SUM( CASE WHEN id_jenis_jab = '1' THEN 1 ELSE 0 END ) AS struktural, SUM( CASE WHEN id_jenis_jab = '2' THEN 1 ELSE 0 END ) AS jft, SUM( CASE WHEN id_jenis_jab = '4' THEN 1 ELSE 0 END ) AS jfu FROM tb_jabakhir";
+        return $this->db->query($sql);
     }
 }

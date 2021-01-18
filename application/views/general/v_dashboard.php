@@ -18,7 +18,10 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah Pegawai Aktif</div>
-
+                            <?php
+                            $countitem = $this->hitung->countItem();
+                            var_dump($countitem);
+                            ?>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
                             <div class="text-muted text-xs"> Pria Orang</div>
                             <div class="text-muted text-xs"> Wanita Orang</div>
