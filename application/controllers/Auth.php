@@ -106,7 +106,7 @@ class Auth extends CI_Controller
                 'name' => htmlspecialchars($this->input->post('name', true)),
                 'email' => htmlspecialchars($email),
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-                'role_id' => 2,
+                'role_id' => 1,
                 'is_active' => 0
             ];
             $this->db->insert('login', $data);

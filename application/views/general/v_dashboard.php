@@ -18,13 +18,10 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah Pegawai Aktif</div>
-                            <?php
-                            $countitem = $this->hitung->countItem();
-                            var_dump($countitem);
-                            ?>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $countitem[0]['total'] ?> Orang</div>
-                            <div class="text-muted text-xs"> Pria Orang</div>
-                            <div class="text-muted text-xs"> Wanita Orang</div>
+
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $this->hitung->countall('tb_data_inti'); ?> Orang</div>
+                            <div class="text-muted text-xs"> Pria <?= $this->hitung->countItem('tb_data_inti', 'jenis_kelamin', 'M'); ?> Orang</div>
+                            <div class="text-muted text-xs"> Wanita <?= $this->hitung->countItem('tb_data_inti', 'jenis_kelamin', 'F'); ?> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>
@@ -43,7 +40,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS JFT</div>
 
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countItem('tb_jabakhir', 'id_jenis_jab', '2'); ?> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fab fa-fw fa-envira fa-2x text-gray-300"></i>
@@ -62,7 +59,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS JFU</div>
 
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countItem('tb_jabakhir', 'id_jenis_jab', "4"); ?> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-dove fa-2x text-gray-300"></i>
@@ -80,7 +77,7 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS Pejabat Struktural</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countmore('tb_jabakhir', 'id_eselon', '21,22,31,32,41,42'); ?> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fab fa-earlybirds fa-2x text-gray-300"></i>
@@ -113,19 +110,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan I</div>
-                                        <span class="h5 font-weight-bold text-primary">130</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '11,12,13,14'); ?> Orang</span>
                                     </li>
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan II</div>
-                                        <span class="h5 font-weight-bold text-primary">130</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '21,22,23,24'); ?> Orang</span>
                                     </li>
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan III</div>
-                                        <span class="h5 font-weight-bold text-primary">130</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '31,32,33,34'); ?> Orang</span>
                                     </li>
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan IV</div>
-                                        <span class="h5 font-weight-bold text-primary">130</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '41,42,43,44,45'); ?> Orang</span>
                                     </li>
 
                                 </ul>
@@ -153,16 +150,28 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">II</th>
-                                <td>Mark</td>
+                                <th scope="row">IIa</th>
+                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "21"); ?> Orang</td>
                             </tr>
                             <tr>
-                                <th scope="row">III</th>
-                                <td>Jacob</td>
+                                <th scope="row">IIb</th>
+                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "22"); ?> Orang</td>
                             </tr>
                             <tr>
-                                <th scope="row">IV</th>
-                                <td>Larry</td>
+                                <th scope="row">IIIa</th>
+                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "31"); ?> Orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IIIb</th>
+                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "32"); ?> Orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IVa</th>
+                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "41"); ?> Orang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IVb</th>
+                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "42"); ?> Orang</td>
                             </tr>
                         </tbody>
                     </table>
