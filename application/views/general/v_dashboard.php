@@ -96,8 +96,8 @@
 
         <!-- Area Chart -->
 
-        <div class="col-xl-8 col-lg-4">
-            <div class="card shadow mb-4">
+        <div class="col-xl-8 col-lg-4" >
+            <div class="card shadow mb-4" style="height: 460px;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Rekapitulasi Pegawai per Golongan</h6>
@@ -184,10 +184,11 @@
     <div class="row">
 
         <!-- Content Column -->
-        <div class="col-lg-6 mb-4">
+        <!-- <div class="col-lg-6 mb-4"> -->
 
             <!-- Project Card Example -->
-            <div class="card shadow mb-4">
+
+            <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Rekapitulasi Pegawai Berdasarkan Pendidikan</h6>
                 </div>
@@ -213,12 +214,12 @@
                         <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Color System -->
 
 
-        </div>
+        <!-- </div> -->
 
         <div class="col-lg-6 mb-4">
             <!-- Project Card Example -->
@@ -238,23 +239,23 @@
 
                             <tr>
                                 <td class="text-primary">Islam</td>
-                                <td></td>
+                                <td><?= $this->hitung->countItem('tb_data_inti', 'agama_id', "1"); ?> </td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Kristen</td>
-                                <td></td>
+                                <td><?= $this->hitung->countItem('tb_data_inti', 'agama_id', "2"); ?></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Katholik</td>
-                                <td></td>
+                                <td><?= $this->hitung->countItem('tb_data_inti', 'agama_id', "3"); ?></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Hindu</td>
-                                <td></td>
+                                <td><?= $this->hitung->countItem('tb_data_inti', 'agama_id', "4"); ?></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Budha</td>
-                                <td></td>
+                                <td><?= $this->hitung->countItem('tb_data_inti', 'agama_id', "5"); ?></td>
                             </tr>
                         </tbody>
                     </table>

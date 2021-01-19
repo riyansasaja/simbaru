@@ -4,7 +4,7 @@ if ($searchresult) :
 
 ?>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <div class="card">
