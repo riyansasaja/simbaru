@@ -1,20 +1,21 @@
+
+
 <div class="container">
-    <div class="row">
+
+    
+
+    <div class="row mx-4">
+
         <div class="col-4">
             <!-- di sini mo taruh foto -->
             <div class="card">
                 <div>
                     <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_LOw4AL.json" background="transparent" speed="1" loop autoplay></lottie-player>
                 </div>
-                <!-- <div class="card-body"> -->
-                <?php //var_dump($detail);
-                //die;
-                ?>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-uppercase font-weight-bold bg-danger text-light"><?= $detail[0]['gelar_depan'] . " " . $detail[0]['nama'] . " " . $detail[0]['gelar_blk'] ?></li>
                     <li class="list-group-item font-weight-bold bg-info text-light">NIP. <?= $detail[0]['nip']; ?></li>
                 </ul>
-                <!-- </div> -->
             </div>
         </div>
 
@@ -113,13 +114,13 @@
                         <div class="card-body">
                             <?php
                             $nip = $detail[0]['nip'];
-                            $folder = scandir('../riyan/');
+                            $folder = scandir('../docs/'.$nip);
                             ?>
 
                             <div class="list-group">
                                 <?php foreach ($folder as $file) : ?>
                                     <?php if ($file !== "." && $file != ".." && $file != "Thumbs.db") : ?>
-                                        <a href="//localhost/riyan/<?= $file; ?>" type="button" class="list-group-item list-group-item-action" target="_blank"><?= $file ?></a>
+                                        <a href="//localhost/docs/<?= $nip."/".$file; ?>" type="button" class="list-group-item list-group-item-action" target="_blank"><?= $file ?></a>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
@@ -168,44 +169,44 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingFour">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            RIWAYAT JABATAN
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                RIWAYAT JABATAN
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-sm">
-                                    <thead>
-
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Jabatan</th>
-                                            <th scope="col">Unit</th>
-                                            <th scope="col">No. SK</th>
-                                            <th scope="col">TMT</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php $i = 1; ?>
-                                        <?php foreach ($jabatan as $j) : ?>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+    
                                             <tr>
-                                                <th scope="row"><?= $i; ?></th>
-                                                <td><?= $j['nama_jabatan'] ?></td>
-                                                <td><?= $j['unor'] ?></td>
-                                                <td><?= $j['nomor_sk'] ?></td>
-                                                <td><?= $j['tmt_jabatan'] ?></td>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Jabatan</th>
+                                                <th scope="col">Unit</th>
+                                                <th scope="col">No. SK</th>
+                                                <th scope="col">TMT</th>
                                             </tr>
-                                            <?php $i++; ?>
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                            <?php $i = 1; ?>
+                                            <?php foreach ($jabatan as $j) : ?>
+                                                <tr>
+                                                    <th scope="row"><?= $i; ?></th>
+                                                    <td><?= $j['nama_jabatan'] ?></td>
+                                                    <td><?= $j['unor'] ?></td>
+                                                    <td><?= $j['nomor_sk'] ?></td>
+                                                    <td><?= $j['tmt_jabatan'] ?></td>
+                                                </tr>
+                                                <?php $i++; ?>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -223,7 +224,7 @@
                             <div class="table-responsive">
                                 <table class="table table-sm">
                                     <thead>
-
+    
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Tingkat</th>
@@ -249,8 +250,9 @@
                     </div>
                 </div>
             </div>
+            
         </div>
+
     </div>
 
-</div>
 </div>
