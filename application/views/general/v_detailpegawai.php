@@ -120,7 +120,7 @@
                             <div class="list-group">
                                 <?php foreach ($folder as $file) : ?>
                                     <?php if ($file !== "." && $file != ".." && $file != "Thumbs.db") : ?>
-                                        <a href="//localhost/docs/<?= $nip."/".$file; ?>" type="button" class="list-group-item list-group-item-action" target="_blank"><?= $file ?></a>
+                                        <a href="//192.168.100.254/docs/<?= $nip."/".$file; ?>" type="button" class="list-group-item list-group-item-action" target="_blank"><?= $file ?></a>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
