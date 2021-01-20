@@ -52,7 +52,9 @@ class Admin extends CI_Controller
         $this->load->view('admin/v_masterData', $data);
         $this->load->view('templates/footbar');
     }
-
     // method masterData finis
 
+    public function userManagement()
+    {
+    }
 }
