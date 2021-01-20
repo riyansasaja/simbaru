@@ -56,5 +56,13 @@ class Admin extends CI_Controller
 
     public function userManagement()
     {
+        $data['user'] =  $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
+        $data['title'] = 'Master Data';
+
+        $this->load->view('templates/headbar');
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('admin/v_usermanagement', $data);
+        $this->load->view('templates/footbar');
     }
 }
