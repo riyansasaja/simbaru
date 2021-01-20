@@ -8,6 +8,7 @@ class Admin extends CI_Controller
         parent::__construct();
         // cek session lewat helper
         is_logged_in();
+        $this->load->model('Madmin');
     }
 
     public function index()
@@ -58,6 +59,7 @@ class Admin extends CI_Controller
     {
         $data['user'] =  $this->db->get_where('login', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Master Data';
+        $data['users'] = $this->Madmin->getuser();
 
         $this->load->view('templates/headbar');
         $this->load->view('templates/sidebar', $data);
