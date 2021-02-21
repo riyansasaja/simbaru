@@ -26,7 +26,7 @@
                                         <td><?= $user['name']; ?></td>
                                         <td><?= $user['email']; ?></td>
                                         <td>
-                                            <a href="" data-toggle="modal" data-target="#modalEditStatus <?= $user['id']; ?>">
+                                            <a href="" data-toggle="modal" data-target="#modalEditStatus" data-id="<?= $user['id']?>">
                                                 <span class="badge badge-pill badge-primary">Status</span>
                                             </a>
                                             <a href="">

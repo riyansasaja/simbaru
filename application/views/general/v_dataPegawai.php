@@ -17,6 +17,7 @@ if ($searchresult) :
                                         <th scope="col">NIP</th>
                                         <th scope="col">NAMA</th>
                                         <th scope="col">UNIT</th>
+                                        <th scope="col">JABATAN</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -26,6 +27,7 @@ if ($searchresult) :
                                             <td scope="row"><?= $s['nip'] ?></td>
                                             <td><?= $s['nama'] ?></td>
                                             <td><?= $s['unor'] ?></td>
+                                            <td><?= $s['nama_jabatan'] ?></td>
 
                                         </tr>
                                     <?php endforeach; ?>

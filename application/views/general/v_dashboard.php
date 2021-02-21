@@ -40,7 +40,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS JFT</div>
 
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countItem('tb_jabakhir', 'id_jenis_jab', '2'); ?> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countItem('v_jabakhir', 'id_jenis_jab', '2'); ?> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fab fa-fw fa-envira fa-2x text-gray-300"></i>
@@ -59,7 +59,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS JFU</div>
 
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countItem('tb_jabakhir', 'id_jenis_jab', "4"); ?> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countItem('v_jabakhir', 'id_jenis_jab', "4"); ?> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-dove fa-2x text-gray-300"></i>
@@ -77,7 +77,7 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah PNS Pejabat Struktural</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countmore('tb_jabakhir', 'id_eselon', '21,22,31,32,41,42'); ?> Orang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->hitung->countmore('v_jabakhir', 'id_eselon', '21,22,31,32,41,42'); ?> Orang</div>
                         </div>
                         <div class="col-auto">
                             <i class="fab fa-earlybirds fa-2x text-gray-300"></i>
@@ -96,7 +96,7 @@
 
         <!-- Area Chart -->
 
-        <div class="col-xl-8 col-lg-4" >
+        <div class="col-xl-8 col-lg-4">
             <div class="card shadow mb-4" style="height: 460px;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -110,19 +110,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan I</div>
-                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '11,12,13,14'); ?> Orang</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('v_golakhir', 'id_golongan', '11,12,13,14'); ?> Orang</span>
                                     </li>
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan II</div>
-                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '21,22,23,24'); ?> Orang</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('v_golakhir', 'id_golongan', '21,22,23,24'); ?> Orang</span>
                                     </li>
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan III</div>
-                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '31,32,33,34'); ?> Orang</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('v_golakhir', 'id_golongan', '31,32,33,34'); ?> Orang</span>
                                     </li>
                                     <li class="list-group-item">
                                         <div class="text-muted text-xs">Golongan IV</div>
-                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('tb_golakhir', 'id_golongan', '41,42,43,44,45'); ?> Orang</span>
+                                        <span class="h5 font-weight-bold text-primary"><?= $this->hitung->countmore('v_golakhir', 'id_golongan', '41,42,43,44,45'); ?> Orang</span>
                                     </li>
 
                                 </ul>
@@ -151,27 +151,27 @@
                         <tbody>
                             <tr>
                                 <th scope="row">IIa</th>
-                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "21"); ?> Orang</td>
+                                <td><?= $this->hitung->countItem('v_jabakhir', 'id_eselon', "21"); ?> Orang</td>
                             </tr>
                             <tr>
                                 <th scope="row">IIb</th>
-                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "22"); ?> Orang</td>
+                                <td><?= $this->hitung->countItem('v_jabakhir', 'id_eselon', "22"); ?> Orang</td>
                             </tr>
                             <tr>
                                 <th scope="row">IIIa</th>
-                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "31"); ?> Orang</td>
+                                <td><?= $this->hitung->countItem('v_jabakhir', 'id_eselon', "31"); ?> Orang</td>
                             </tr>
                             <tr>
                                 <th scope="row">IIIb</th>
-                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "32"); ?> Orang</td>
+                                <td><?= $this->hitung->countItem('v_jabakhir', 'id_eselon', "32"); ?> Orang</td>
                             </tr>
                             <tr>
                                 <th scope="row">IVa</th>
-                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "41"); ?> Orang</td>
+                                <td><?= $this->hitung->countItem('v_jabakhir', 'id_eselon', "41"); ?> Orang</td>
                             </tr>
                             <tr>
                                 <th scope="row">IVb</th>
-                                <td><?= $this->hitung->countItem('tb_jabakhir', 'id_eselon', "42"); ?> Orang</td>
+                                <td><?= $this->hitung->countItem('v_jabakhir', 'id_eselon', "42"); ?> Orang</td>
                             </tr>
                         </tbody>
                     </table>
@@ -186,9 +186,9 @@
         <!-- Content Column -->
         <!-- <div class="col-lg-6 mb-4"> -->
 
-            <!-- Project Card Example -->
+        <!-- Project Card Example -->
 
-            <!-- <div class="card shadow mb-4">
+        <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Rekapitulasi Pegawai Berdasarkan Pendidikan</h6>
                 </div>
@@ -216,7 +216,7 @@
                 </div>
             </div> -->
 
-            <!-- Color System -->
+        <!-- Color System -->
 
 
         <!-- </div> -->
