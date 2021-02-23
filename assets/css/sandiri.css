@@ -1,0 +1,101 @@
+* {
+	font-family: "Nunito Sans", sans-serif;
+}
+.container {
+	padding-bottom: 20px;
+}
+.form-section {
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+	padding-left: 0;
+}
+
+.text-login {
+	margin-top: 80px;
+}
+.text-login h3 {
+	color: #56a7f8;
+	font-size: 22px;
+}
+
+.text-login p {
+	font-weight: lighter;
+	font-size: 10px;
+}
+
+.input-form {
+	margin-top: 40px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group input {
+	background-color: #f7f7f7;
+	border-style: none none none solid;
+	border-width: 5px;
+	border-color: #56a7f8;
+}
+
+.tombol {
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+.tombol button {
+	margin-bottom: 20px;
+	border-radius: 40px;
+}
+.tombol a {
+	margin-bottom: 20px;
+	border-radius: 40px;
+}
+
+.foot {
+	font-weight: lighter;
+	font-size: 10px;
+	margin-top: 20px;
+}
+
+/* untuk desktop */
+@media (min-width: 992px) {
+	/* background */
+	.gambar-section {
+		padding-right: 0;
+		width: fit-content;
+		overflow: hidden;
+	}
+
+	.gambar-section .gmbr img {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	.tulisan {
+		margin-top: -137px;
+		margin-left: 50px;
+	}
+
+	.tulisan p {
+		font-weight: lighter;
+		font-size: 14px;
+	}
+
+	.tulisan h3 {
+		font-weight: 400;
+		font-size: 38px;
+		margin-top: -20px;
+	}
+	.tulisan span {
+		display: block;
+		font-weight: 200;
+		font-size: 10px;
+		margin-top: -5px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 200px;
+	}
+
+	.form-section {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+		margin-left: 0;
+	}
+}
