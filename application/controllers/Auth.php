@@ -21,7 +21,7 @@ class Auth extends CI_Controller
         // bekeng form validation
         if ($this->form_validation->run() == false) {
             # loding tampilan login
-            $this->load->view('auth/v_login');
+            $this->load->view('auth/v_login_baru.php');
         } else {
             // validasi sukses
             $this->_login();

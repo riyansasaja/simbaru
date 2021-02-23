@@ -12,7 +12,7 @@ class General extends CI_Controller
 
         // cek session lewat helper
         is_logged_in();
-        $this->load->model('modeldata');
+        $this->load->model('ModelData', 'modeldata');
         $this->load->library('hitung');
     }
 
